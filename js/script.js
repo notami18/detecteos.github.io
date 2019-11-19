@@ -1,6 +1,5 @@
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    var hola = "Pc...";
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
         hola = "Windows Phone";
@@ -8,7 +7,7 @@ function getMobileOperatingSystem() {
     }
 
     if (/android/i.test(userAgent)) {
-        hola = "Android";
+        $(".identifier").html('<a hre="https://play.google.com/store/apps/details?id=bpt.com.coopebombas">Coopebombas.</a>');
         return "Android";
     }
 
@@ -18,7 +17,7 @@ function getMobileOperatingSystem() {
         return "iOS";
     }
 
-    alert(hola);
+    $(".identifier").html('PC... Hola mundo');
 
     return "unknown";
 }
